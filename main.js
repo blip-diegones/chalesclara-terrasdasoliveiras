@@ -79,9 +79,11 @@ function initHouseScrollZoominAnimation() {
 /* ==========================================================
    2. BOOKING CALCULATOR & WHATSAPP ENGINE
    ========================================================== */
-const BASE_NIGHTLY_RATE = 550;
-const ROMANCE_PACKAGE_RATE = 180;
-const OFFICIAL_PHONE = "5535997386945"; // WhatsApp de Reservas
+// ==========================================================
+// CONFIGURAÇÃO DO WHATSAPP DE RESERVAS
+// Altere o número abaixo para o WhatsApp oficial do Chalés Clara quando disponibilizado (formato: 55 + DDD + Número)
+// ==========================================================
+const OFFICIAL_PHONE = "5535997386945"; // WhatsApp Provisório / Configurável
 
 function initBookingCalculator() {
   const checkinInput = document.getElementById('checkin-date');
