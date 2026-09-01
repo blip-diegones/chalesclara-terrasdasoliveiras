@@ -208,6 +208,7 @@ Poderia me confirmar a disponibilidade para essas datas? Muito obrigado(a)!`;
    ========================================================== */
 const allPhotosDatabase = [
   // Exterior & Terreno
+  { category: 'exterior', src: './assets/images/night-cabin-oliveiras.png', title: 'Chalé Iluminado à Noite', caption: 'Iluminação cênica na árvore e chalé A-frame brilhando sob a noite estrelada de Maria da Fé MG' },
   { category: 'exterior', src: './Galeria/Exterior/1.avif', title: 'Arquitetura A-Frame & Deck', caption: 'Estrutura A-Frame moderna em madeira rodeada pelas montanhas e plantação de oliveiras em Maria da Fé MG' },
   { category: 'exterior', src: './Galeria/Exterior/2.avif', title: 'Deck & Entardecer', caption: 'Área externa privativa com vista privilegiada para a Serra da Mantiqueira' },
   { category: 'exterior', src: './Galeria/Exterior/3.avif', title: 'Natureza & Tranquilidade', caption: 'Clima serrano puro, silêncio e mudas de oliveiras integradas ao chalé' },
