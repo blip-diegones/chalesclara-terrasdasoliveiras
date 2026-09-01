@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chalés Clara • Terra das Oliveiras | Links Oficiais</title>
+  <meta name="description" content="Acesse o site oficial, galeria de fotos e WhatsApp para reservas diretas no Chalés Clara - Terra das Oliveiras em Maria da Fé - MG.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chalés Clara • Terra das Oliveiras | Links Oficiais">
+  <meta property="og:description" content="Paraíso em Minas Gerais: conforto, lazer e privacidade. Reserve direto sem taxas.">
+  <meta property="og:image" content="./Galeria/Exterior/1.avif">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-black: #070908;
+      --bg-card: rgba(22, 27, 24, 0.75);
+      --bg-card-hover: rgba(32, 40, 36, 0.92);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --border-gold: rgba(203, 163, 88, 0.45);
+      --text-sand: #f4efe8;
+      --text-muted: #9aa29d;
+      --accent-gold: #cba358;
+      --accent-gold-hover: #dfb96f;
+      --color-whatsapp: #25d366;
+      --color-instagram: #e1306c;
+      --radius-md: 14px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-black);
+      color: var(--text-sand);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.25rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Background */
+    .bg-ambient {
+      position: fixed;
+      inset: 0;
+      background-image: url('./Galeria/Exterior/1.avif');
+      background-size: cover;
+      background-position: center;
+      filter: blur(16px) brightness(0.22);
+      transform: scale(1.08);
+      z-index: 0;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(7, 9, 8, 0.65) 0%, rgba(7, 9, 8, 0.96) 100%);
+      z-index: 1;
+    }
+
+    .links-wrapper {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Avatar & Profile */
+    .profile-avatar-wrap {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--accent-gold), rgba(203, 163, 88, 0.25));
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+      margin-bottom: 1.25rem;
+    }
+
+    .profile-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #0f1411;
+    }
+
+    .status-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 4px;
+      width: 18px;
+      height: 18px;
+      background-color: var(--color-whatsapp);
+      border: 3px solid #070908;
+      border-radius: 50%;
+    }
+
+    .brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.1rem;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      color: var(--text-sand);
+      line-height: 1.15;
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    /* Badges Bar */
+    .profile-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.72rem;
+      font-family: 'Space Mono', monospace;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .pill-badge.gold {
+      border-color: var(--border-gold);
+      color: var(--accent-gold);
+      background: rgba(203, 163, 88, 0.12);
+    }
+
+    /* Direct Booking Promo Banner */
+    .promo-banner {
+      width: 100%;
+      background: rgba(203, 163, 88, 0.08);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-align: left;
+    }
+
+    .promo-icon {
+      color: var(--accent-gold);
+      flex-shrink: 0;
+    }
+
+    .promo-text strong {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--text-sand);
+    }
+
+    .promo-text span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    /* Links Stack */
+    .links-stack {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1.15rem 1.35rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      color: var(--text-sand);
+      text-decoration: none;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-gold);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .link-card.featured {
+      border-color: var(--border-gold);
+      background: linear-gradient(135deg, rgba(203, 163, 88, 0.2) 0%, rgba(22, 27, 24, 0.88) 100%);
+    }
+
+    .link-card.featured:hover {
+      background: linear-gradient(135deg, rgba(203, 163, 88, 0.3) 0%, rgba(28, 35, 31, 0.96) 100%);
+    }
+
+    .link-card.whatsapp-card {
+      border-color: rgba(37, 211, 102, 0.38);
+    }
+
+    .link-card.whatsapp-card:hover {
+      border-color: var(--color-whatsapp);
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.18) 0%, rgba(22, 27, 24, 0.88) 100%);
+    }
+
+    .link-card.instagram-card {
+      border-color: rgba(225, 48, 108, 0.35);
+    }
+
+    .link-card.instagram-card:hover {
+      border-color: #f77737;
+      background: linear-gradient(135deg, rgba(225, 48, 108, 0.18) 0%, rgba(22, 27, 24, 0.88) 100%);
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .link-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      flex-shrink: 0;
+    }
+
+    .link-card.whatsapp-card .link-icon-box {
+      color: var(--color-whatsapp);
+      background: rgba(37, 211, 102, 0.12);
+      border-color: rgba(37, 211, 102, 0.35);
+    }
+
+    .link-card.instagram-card .link-icon-box {
+      color: #f77737;
+      background: rgba(225, 48, 108, 0.12);
+      border-color: rgba(225, 48, 108, 0.35);
+    }
+
+    .link-texts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text-sand);
+      letter-spacing: 0.02em;
+    }
+
+    .link-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    .link-arrow {
+      color: var(--text-muted);
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .link-card:hover .link-arrow {
+      color: var(--accent-gold);
+      transform: translateX(3px);
+    }
+
+    /* Footer */
+    .links-footer {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.08em;
+    }
+
+    .links-footer a {
+      color: var(--accent-gold);
+      text-decoration: none;
+    }
+
+    .links-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Background -->
+  <div class="bg-ambient"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Main Container -->
+  <main class="links-wrapper">
+
+    <!-- Profile Avatar & Title -->
+    <div class="profile-avatar-wrap">
+      <img src="./Galeria/Exterior/1.avif" alt="Chalés Clara - Terra das Oliveiras" class="profile-avatar">
+      <div class="status-badge" title="Atendimento Online para Reservas"></div>
+    </div>
+
+    <h1 class="brand-title">Chalés Clara</h1>
+    <p class="brand-tagline">
+      Terra das Oliveiras &bull; Paraíso de Conforto, Lazer e Privacidade em Maria da Fé - MG
+    </p>
+
+    <!-- Social Proof Badges -->
+    <div class="profile-badges">
+      <span class="pill-badge gold">
+        <i data-lucide="coffee" class="w-3.5 h-3.5"></i>
+        CAFÉ DA MANHÃ INCLUSO
+      </span>
+      <span class="pill-badge">
+        <i data-lucide="bath" class="w-3.5 h-3.5"></i>
+        HIDROMASSAGEM
+      </span>
+      <span class="pill-badge">
+        <i data-lucide="trees" class="w-3.5 h-3.5"></i>
+        MUDA DE OLIVEIRAS
+      </span>
+      <span class="pill-badge">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+        2,5 KM DO CENTRO
+      </span>
+    </div>
+
+    <!-- Direct Booking Promo Banner -->
+    <div class="promo-banner">
+      <div class="promo-icon">
+        <i data-lucide="shield-check" class="w-6 h-6"></i>
+      </div>
+      <div class="promo-text">
+        <strong>Reserva Direta Oficial</strong>
+        <span>Melhores tarifas garantidas e isenção total de taxas de aplicativos intermediários.</span>
+      </div>
+    </div>
+
+    <!-- Links Stack -->
+    <div class="links-stack">
+
+      <!-- 1. Site Oficial -->
+      <a href="index.html" class="link-card featured">
+        <div class="link-left">
+          <div class="link-icon-box">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+          </div>
+          <div class="link-texts">
+            <span class="link-title">Site Oficial &bull; Conheça o Chalé</span>
+            <span class="link-subtitle">Tour pelas fotos, comodidades e calculadora de diárias</span>
+          </div>
+        </div>
+        <i data-lucide="arrow-right" class="w-4 h-4 link-arrow"></i>
+      </a>
+
+      <!-- 2. WhatsApp Direto -->
+      <a href="https://wa.me/5535997386945?text=Ol%C3%A1!%20Encontrei%20o%20link%20do%20Chal%C3%A9s%20Clara%20-%20Terra%20das%20Oliveiras%20e%20gostaria%20de%20consultar%20disponibilidade%20para%20reserva." target="_blank" rel="noopener" class="link-card whatsapp-card">
+        <div class="link-left">
+          <div class="link-icon-box">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </div>
+          <div class="link-texts">
+            <span class="link-title">WhatsApp &bull; Consultar Disponibilidade</span>
+            <span class="link-subtitle">Atendimento ágil e reserva direta sem taxas</span>
+          </div>
+        </div>
+        <i data-lucide="arrow-up-right" class="w-4 h-4 link-arrow"></i>
+      </a>
+
+      <!-- 3. Instagram Oficial -->
+      <a href="https://www.instagram.com/chalesclara/" target="_blank" rel="noopener" class="link-card instagram-card">
+        <div class="link-left">
+          <div class="link-icon-box">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </div>
+          <div class="link-texts">
+            <span class="link-title">Instagram Oficial</span>
+            <span class="link-subtitle">@chalesclara &bull; Bastidores, fotos e momentos</span>
+          </div>
+        </div>
+        <i data-lucide="arrow-up-right" class="w-4 h-4 link-arrow"></i>
+      </a>
+
+      <!-- 4. Galeria de Fotos -->
+      <a href="index.html#galeria" class="link-card">
+        <div class="link-left">
+          <div class="link-icon-box">
+            <i data-lucide="image" class="w-5 h-5"></i>
+          </div>
+          <div class="link-texts">
+            <span class="link-title">Galeria de Fotos Completa</span>
+            <span class="link-subtitle">Hidromassagem, quarto, fogo de chão e sala</span>
+          </div>
+        </div>
+        <i data-lucide="arrow-right" class="w-4 h-4 link-arrow"></i>
+      </a>
+
+      <!-- 5. Localização & Como Chegar -->
+      <a href="index.html#localizacao" class="link-card">
+        <div class="link-left">
+          <div class="link-icon-box">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </div>
+          <div class="link-texts">
+            <span class="link-title">Como Chegar &bull; Maria da Fé MG</span>
+            <span class="link-subtitle">2,5 km do centro &bull; Estrada excelente para todo carro</span>
+          </div>
+        </div>
+        <i data-lucide="arrow-right" class="w-4 h-4 link-arrow"></i>
+      </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="links-footer">
+      <p>&copy; 2026 Chalés Clara &bull; Terra das Oliveiras &bull; Maria da Fé - MG</p>
+    </footer>
+
+  </main>
+
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chalés Clara | Terra das Oliveiras • Maria da Fé - MG</title>
+  <meta name="description" content="Paraíso em Minas Gerais: conforto, lazer e privacidade. Chalé A-Frame em Maria da Fé MG com banheira de hidromassagem, ar condicionado, fogo de chão, café da manhã incluso e plantação de oliveiras.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Chalés Clara | Terra das Oliveiras • Maria da Fé - MG">
+  <meta property="og:description" content="Paraíso em Minas Gerais: conforto, lazer e privacidade. Banheira de hidromassagem, café incluso, fogo de chão e contato com mudas de oliveiras na Serra da Mantiqueira.">
+  <meta property="og:image" content="./Galeria/Exterior/1.avif">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-charcoal text-sand antialiased selection:bg-gold selection:text-black">
+
+  <!-- HEADER WRAPPER -->
+  <header class="site-header">
+    <!-- TOP ANNOUNCEMENT / SOCIAL PROOF BAR -->
+    <div class="top-bar">
+      <div class="container flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="badge-guest-fav">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            EXPERIÊNCIA EXCLUSIVA
+          </span>
+          <span class="top-bar-text hidden-mobile">Café da Manhã Incluso &bull; Hidromassagem &bull; Mudas de Oliveiras</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="top-bar-location">MARIA DA FÉ &bull; MG (CAPITAL DO AZEITE)</span>
+          <a href="#reserva" class="top-bar-cta">
+            <span>Reserva direta sem taxas</span>
+            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <nav class="navbar" id="navbar">
+      <div class="container flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a href="#" class="logo">
+          <span class="logo-title">TERRA DAS OLIVEIRAS</span>
+          <span class="logo-sub">CHALÉS CLARA &bull; MARIA DA FÉ - MG</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links flex items-center gap-8">
+          <a href="#o-espaco" class="nav-link">O Espaço</a>
+          <a href="#experiencias" class="nav-link">Diferenciais</a>
+          <a href="#galeria" class="nav-link">Fotos</a>
+          <a href="#avaliacoes" class="nav-link">Depoimentos</a>
+          <a href="#localizacao" class="nav-link">Localização</a>
+          <a href="#faq" class="nav-link">Dúvidas</a>
+          <a href="links.html" class="nav-link text-gold font-semibold flex items-center gap-1.5" title="Abrir Linktree Oficial">
+            <i data-lucide="link" class="w-3.5 h-3.5"></i>
+            <span>Linktree</span>
+          </a>
+        </div>
+
+        <!-- Navigation Action CTA & Socials -->
+        <div class="nav-cta flex items-center gap-4">
+          <a href="https://www.instagram.com/chalesclara/" target="_blank" rel="noopener" class="icon-link" aria-label="Instagram Oficial">
+            <i data-lucide="instagram" class="w-4 h-4 text-muted hover:text-gold"></i>
+          </a>
+          <a href="#reserva" class="btn btn-gold btn-sm">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Consultar Datas</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#o-espaco" class="mobile-link">O Espaço</a>
+        <a href="#experiencias" class="mobile-link">Diferenciais</a>
+        <a href="#galeria" class="mobile-link">Galeria de Fotos</a>
+        <a href="#avaliacoes" class="mobile-link">Depoimentos</a>
+        <a href="#localizacao" class="mobile-link">Como Chegar</a>
+        <a href="#faq" class="mobile-link">Dúvidas Frequentes</a>
+        <a href="links.html" class="mobile-link text-gold">Linktree Oficial</a>
+        <a href="#reserva" class="btn btn-gold w-full mt-4">Reservar Agora</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION WITH HOUSE SCROLL ZOOM-IN ANIMATION -->
+  <div id="hero-animation-wrapper" class="relative w-full bg-black">
+    <section id="hero-pinned-trigger" class="hero-pinned-section">
+      
+      <!-- Background Big Watermark -->
+      <div class="hero-watermark" id="hero-watermark">
+        OLIVEIRAS
+      </div>
+
+      <!-- Four Corner Crosshair Markers -->
+      <div class="corner-marker top-left">
+        <span>+</span> <span>SERRA DA MANTIQUEIRA</span>
+      </div>
+      <div class="corner-marker top-right">
+        <span>CAFÉ INCLUSO</span> <span>+</span>
+      </div>
+      <div class="corner-marker bottom-left">
+        <span>+</span> <span>MARIA DA FÉ &bull; MG</span>
+      </div>
+      <div class="corner-marker bottom-right">
+        <span>TERRA DAS OLIVEIRAS</span> <span>+</span>
+      </div>
+
+      <!-- Hero Intro Content -->
+      <div class="hero-intro" id="hero-intro-content">
+        <div class="tag-pill mb-4">
+          <span class="pulse-dot"></span>
+          <span>Paraíso em Minas Gerais: Conforto, Lazer &amp; Privacidade</span>
+        </div>
+        <h1 class="hero-title">
+          Charme rústico com a sofisticação moderna.
+        </h1>
+        <p class="hero-subtitle">
+          Situado na encantadora cidade de Maria da Fé MG — famosa pela excelência na produção de azeites nobres. Desfrute de hidromassagem, ar condicionado, fogo de chão e contato único com a plantação de oliveiras.
+        </p>
+        <div class="flex items-center gap-4 mt-8 flex-wrap justify-center">
+          <a href="#reserva" class="btn btn-primary">
+            <span>Verificar Disponibilidade</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#galeria" class="btn btn-outline">
+            <i data-lucide="image" class="w-4 h-4"></i>
+            <span>Ver Fotos Reais</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Central Architectural House Mask Container -->
+      <div class="house-mask-viewport" id="house-mask-viewport">
+        <img 
+          src="./Galeria/Exterior/1.avif" 
+          alt="Fachada Chalés Clara - Terra das Oliveiras em Maria da Fé MG" 
+          class="house-mask-media"
+          id="house-mask-media"
+        />
+        <div class="media-overlay"></div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="scroll-cue">
+        <span class="scroll-cue-text">Role para conhecer o refúgio</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outro Section -->
+    <section class="hero-outro-section">
+      <div class="container text-center max-w-3xl">
+        <span class="outro-tag">MARIA DA FÉ &bull; MINAS GERAIS</span>
+        <h2 class="outro-title">CHALÉS CLARA • TERRA DAS OLIVEIRAS</h2>
+        <p class="outro-desc">
+          O chalé é equipado com tudo o que você precisa para uma estadia inesquecível. Localização privilegiada em um dos bairros mais preservados da cidade, a apenas 2,5 km do centro e com fácil acesso para qualquer carro.
+        </p>
+        <div class="stats-grid mt-16">
+          <div class="stat-card">
+            <span class="stat-val">2,5 km</span>
+            <span class="stat-lbl">Do Centro da Cidade</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-val">100%</span>
+            <span class="stat-lbl">Café da Manhã Incluso</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-val">Privativo</span>
+            <span class="stat-lbl">Hidromassagem &amp; Fogo de Chão</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-val">0 Taxas</span>
+            <span class="stat-lbl">Reserva Direta no WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SECTION: THE EXPERIENCE / HIGHLIGHTS -->
+  <section id="o-espaco" class="section-padding bg-charcoal-light relative">
+    <div class="container">
+      <div class="section-header text-center max-w-2xl mx-auto mb-20">
+        <span class="section-eyebrow">O ESPAÇO &amp; CONFORTO</span>
+        <h2 class="section-heading">Projetado para encantar e acolher</h2>
+        <p class="section-subheading">
+          Uma experiência acolhedora que harmoniza a tranquilidade do campo com comodidades completas e acabamentos de primeira linha.
+        </p>
+      </div>
+
+      <!-- HIGHLIGHT 1: Hidromassagem -->
+      <div class="experience-row grid-2 items-center mb-24">
+        <div class="experience-image-wrap">
+          <img src="./Galeria/Banheira/1.avif" alt="Banheira de hidromassagem privativa" class="rounded-lg shadow-2xl img-hover-zoom">
+          <div class="image-badge">
+            <i data-lucide="sparkles" class="w-4 h-4 text-gold"></i>
+            <span>Relaxamento &amp; Conforto</span>
+          </div>
+        </div>
+        <div class="experience-content">
+          <div class="feature-icon-box">
+            <i data-lucide="bath" class="w-6 h-6 text-gold"></i>
+          </div>
+          <span class="feature-tag">BEM-ESTAR ABSOLUTO</span>
+          <h3 class="feature-title">Banheira de Hidromassagem Privativa</h3>
+          <p class="feature-text">
+            Desfrute de momentos de puro relaxamento com jatos de hidromassagem e água aquecida. O espaço perfeito para desligar da rotina acelerada e recarregar as energias com total privacidade.
+          </p>
+          <ul class="feature-checklist">
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Fornecemos conjunto completo de cama e banho</li>
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Toalhas e roupas de cama higienizadas e macias</li>
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Ambiente privativo com iluminação suave</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- HIGHLIGHT 2: Fogo de Chão & Oliveiras -->
+      <div class="experience-row grid-2 items-center mb-24 row-reverse" id="experiencias">
+        <div class="experience-image-wrap">
+          <img src="./Galeria/Exterior/4.avif" alt="Fogo de chão e deck externo" class="rounded-lg shadow-2xl img-hover-zoom">
+          <div class="image-badge">
+            <i data-lucide="flame" class="w-4 h-4 text-gold"></i>
+            <span>Sob as Estrelas</span>
+          </div>
+        </div>
+        <div class="experience-content">
+          <div class="feature-icon-box">
+            <i data-lucide="flame" class="w-6 h-6 text-gold"></i>
+          </div>
+          <span class="feature-tag">EXPERIÊNCIA AO AR LIVRE</span>
+          <h3 class="feature-title">Fogo de Chão &amp; Contato com Mudas de Oliveiras</h3>
+          <p class="feature-text">
+            Maria da Fé é referência nacional na produção de azeites de altíssima qualidade. Em nossa propriedade, você tem acesso direto à plantação com mudas de oliveiras e um deck externo com fogo de chão e churrasqueira para celebrar ao redor da fogueira.
+          </p>
+          <ul class="feature-checklist">
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Fogo de chão para noites de vinho e marshmallows</li>
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Churrasqueira externa pronta para o seu churrasco</li>
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Acesso e contemplação de mudas de oliveiras</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- HIGHLIGHT 3: Cozinha Equipada & Acomodação Família -->
+      <div class="experience-row grid-2 items-center">
+        <div class="experience-image-wrap">
+          <img src="./Galeria/Sala de Estar/1.avif" alt="Sala de estar integrada e climatizada" class="rounded-lg shadow-2xl img-hover-zoom">
+          <div class="image-badge">
+            <i data-lucide="coffee" class="w-4 h-4 text-gold"></i>
+            <span>Café da Manhã Incluso</span>
+          </div>
+        </div>
+        <div class="experience-content">
+          <div class="feature-icon-box">
+            <i data-lucide="utensils" class="w-6 h-6 text-gold"></i>
+          </div>
+          <span class="feature-tag">COMODIDADE &amp; VERSATILIDADE</span>
+          <h3 class="feature-title">Cozinha Equipada, Ar Condicionado &amp; Sofá-Cama</h3>
+          <p class="feature-text">
+            Além do delicioso café da manhã incluso, a cozinha é toda equipada com eletrodomésticos e utensílios completos. O ambiente conta com ar condicionado quente/frio e um confortável sofá-cama que acomoda 1 criança com facilidade.
+          </p>
+          <ul class="feature-checklist">
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Cozinha completa com cooktop, frigobar e louças</li>
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> Ar condicionado para climatização ideal em qualquer época</li>
+            <li><i data-lucide="check" class="w-4 h-4 text-gold"></i> 01 sofá-cama que acomoda 1 criança com conforto</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AMENITIES / CHECKLIST SECTION -->
+  <section class="section-padding bg-charcoal">
+    <div class="container">
+      <div class="section-header text-center max-w-2xl mx-auto mb-20">
+        <span class="section-eyebrow">TUDO O QUE VOCÊ PRECISA</span>
+        <h2 class="section-heading">Comodidades do Espaço</h2>
+        <p class="section-subheading">
+          Criamos um refúgio acolhedor com cada detalhe planejado para você descansar sem preocupações.
+        </p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="bath"></i></div>
+          <h4>Banheira de Hidromassagem</h4>
+          <p>Banho com hidromassagem e água aquecida para momentos relaxantes.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="coffee"></i></div>
+          <h4>Café da Manhã Incluso</h4>
+          <p>Comece o dia com itens frescos e saborosos da tradição mineira.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="flame"></i></div>
+          <h4>Fogo de Chão Privativo</h4>
+          <p>Área externa com fogueira para apreciar o céu estrelado da serra.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="drumstick"></i></div>
+          <h4>Churrasqueira Externa</h4>
+          <p>Espaço para preparar deliciosos grelhados ao ar livre.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="trees"></i></div>
+          <h4>Plantação de Oliveiras</h4>
+          <p>Contato direto com a natureza e mudas de oliveiras na propriedade.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="wind"></i></div>
+          <h4>Ar Condicionado</h4>
+          <p>Controle térmico ideal para dias quentes e noites frias de serra.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="utensils"></i></div>
+          <h4>Cozinha Toda Equipada</h4>
+          <p>Cooktop, frigobar, cafeteira, pratos, copos, taças e talheres.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="bed-double"></i></div>
+          <h4>Cama &amp; Banho Inclusos</h4>
+          <p>Fornecemos jogo completo de lençóis, edredons, travesseiros e toalhas.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="sofa"></i></div>
+          <h4>Sofá-Cama para Criança</h4>
+          <p>01 sofá-cama versátil que acomoda com conforto 1 criança.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="shield-check"></i></div>
+          <h4>Portal com Porteiro Eletrônico</h4>
+          <p>Privacidade e segurança com portão automatizado e trava eletrônica.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="car"></i></div>
+          <h4>Acesso Fácil (2,5 km do Centro)</h4>
+          <p>Estrada de terra bem cuidada com acesso tranquilo para qualquer carro.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i data-lucide="wifi"></i></div>
+          <h4>Wi-Fi &amp; Conexão</h4>
+          <p>Internet disponível para trabalhar remotamente ou curtir seus filmes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIZED PHOTO GALLERY WITH FILTER TABS -->
+  <section id="galeria" class="section-padding bg-charcoal-light">
+    <div class="container">
+      <div class="flex items-end justify-between mb-10 flex-wrap gap-6">
+        <div>
+          <span class="section-eyebrow">FOTOS REAIS DA PROPRIEDADE</span>
+          <h2 class="section-heading">Galeria do Chalé</h2>
+        </div>
+        <p class="text-muted text-sm max-w-md">
+          Explore as fotos dos cômodos e da área externa do Terra das Oliveiras. Clique em qualquer foto para ampliar.
+        </p>
+      </div>
+
+      <!-- Filter Tabs by Room -->
+      <div class="gallery-tabs-wrap mb-10">
+        <button class="gallery-tab-btn active" data-filter="todos">
+          <i data-lucide="grid" class="w-3.5 h-3.5"></i>
+          <span>Todas as Fotos</span>
+        </button>
+        <button class="gallery-tab-btn" data-filter="exterior">
+          <i data-lucide="mountain" class="w-3.5 h-3.5"></i>
+          <span>Exterior &amp; Fogo de Chão</span>
+        </button>
+        <button class="gallery-tab-btn" data-filter="banheira">
+          <i data-lucide="bath" class="w-3.5 h-3.5"></i>
+          <span>Banheira Hidro</span>
+        </button>
+        <button class="gallery-tab-btn" data-filter="sala">
+          <i data-lucide="sofa" class="w-3.5 h-3.5"></i>
+          <span>Sala de Estar</span>
+        </button>
+        <button class="gallery-tab-btn" data-filter="quarto">
+          <i data-lucide="bed-double" class="w-3.5 h-3.5"></i>
+          <span>Quarto</span>
+        </button>
+        <button class="gallery-tab-btn" data-filter="cozinha">
+          <i data-lucide="utensils" class="w-3.5 h-3.5"></i>
+          <span>Cozinha Completa</span>
+        </button>
+      </div>
+
+      <!-- Dynamic Gallery Mosaic Container -->
+      <div class="gallery-mosaic" id="gallery-mosaic-container">
+        <!-- Rendered dynamically by main.js with all categorized photos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-container">
+      <button class="lightbox-close" onclick="closeLightboxDirectly()" aria-label="Fechar">&times;</button>
+      <button class="lightbox-nav lightbox-prev" onclick="prevLightbox(event)" aria-label="Anterior">&#10094;</button>
+      <img id="lightbox-img" src="" alt="Foto expandida">
+      <div class="lightbox-meta-box">
+        <p id="lightbox-caption" class="lightbox-caption-text"></p>
+        <span id="lightbox-counter" class="lightbox-counter-text"></span>
+      </div>
+      <button class="lightbox-nav lightbox-next" onclick="nextLightbox(event)" aria-label="Próxima">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- SOCIAL PROOF & GUEST REVIEWS -->
+  <section id="avaliacoes" class="section-padding bg-charcoal relative">
+    <div class="container">
+      
+      <!-- HIGHLIGHT RATING CARD -->
+      <div class="airbnb-header-card mb-16">
+        <div class="airbnb-score-wrap">
+          <div class="score-icon-badge">
+            <i data-lucide="heart" class="w-8 h-8 text-gold"></i>
+          </div>
+          <div class="score-number">5.0</div>
+        </div>
+        <div class="airbnb-badge-text">
+          <h3>Experiência Inesquecível em Maria da Fé</h3>
+          <p>Hóspedes encantados com o silêncio, a hidromassagem, o fogo de chão e o acolhimento do Terra das Oliveiras.</p>
+        </div>
+        <div class="airbnb-score-breakdown">
+          <div class="score-pill"><span>Limpeza</span> <strong>5,0</strong></div>
+          <div class="score-pill"><span>Conforto</span> <strong>5,0</strong></div>
+          <div class="score-pill"><span>Café da Manhã</span> <strong>5,0</strong></div>
+          <div class="score-pill"><span>Localização</span> <strong>5,0</strong></div>
+          <div class="score-pill"><span>Privacidade</span> <strong>5,0</strong></div>
+        </div>
+      </div>
+
+      <!-- REVIEWS GRID -->
+      <div class="reviews-grid">
+        
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-author">Marcelo &amp; Gabriela</div>
+              <div class="review-meta">Fim de Semana Romântico &bull; Maria da Fé MG</div>
+            </div>
+            <div class="review-stars-icons">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+            </div>
+          </div>
+          <p class="review-body">
+            "Lugar impecável! O chalé é ainda mais bonito pessoalmente. A banheira de hidromassagem é maravilhosa e a noite no fogo de chão vendo as estrelas foi inesquecível. Café da manhã delicioso e super caprichado!"
+          </p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card highlight-card">
+          <div class="review-header">
+            <div class="review-avatar">L</div>
+            <div>
+              <div class="review-author">Luciana &amp; Família</div>
+              <div class="review-meta">Estadia em Família &bull; Maria da Fé MG</div>
+            </div>
+            <div class="review-stars-icons">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+            </div>
+          </div>
+          <p class="review-body">
+            "Excelente acolhimento! Nosso filho adorou o sofá-cama e o espaço das oliveiras. A cozinha é bem equipada, o acesso a partir do centro de Maria da Fé foi super fácil e o portão eletrônico traz muita segurança. Voltaremos com certeza!"
+          </p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">R</div>
+            <div>
+              <div class="review-author">Renata C.</div>
+              <div class="review-meta">Casal &bull; Celebrando Aniversário</div>
+            </div>
+            <div class="review-stars-icons">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-gold text-gold"></i>
+            </div>
+          </div>
+          <p class="review-body">
+            "A energia desse lugar é revigorante. Clima de serra gostoso, ar condicionado quentinho à noite e o charme das mudas de oliveiras. Atendimento super atencioso pelo WhatsApp. Nota 10!"
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESERVATION & INSTANT QUOTATION MACHINE (HIGH CONVERSION CORE) -->
+  <section id="reserva" class="section-padding bg-charcoal-light relative border-t border-b border-border">
+    <div class="container">
+      <div class="grid-booking">
+        
+        <!-- Left: Value Proposition & Direct Booking Advantages -->
+        <div class="booking-info">
+          <span class="section-eyebrow">RESERVA DIRETA OFICIAL</span>
+          <h2 class="section-heading mb-6">Garanta seus dias no Terra das Oliveiras</h2>
+          <p class="text-muted leading-relaxed mb-8">
+            Ao reservar diretamente pelo nosso canal oficial, você garante o melhor valor, atendimento personalizado e <strong>isenção de taxas de intermediação de aplicativos</strong>.
+          </p>
+
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon"><i data-lucide="coffee" class="w-5 h-5 text-gold"></i></div>
+              <div>
+                <h4>Café da Manhã Incluso</h4>
+                <p>Itens frescos para você acordar e saborear com tranquilidade.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i data-lucide="shield-check" class="w-5 h-5 text-gold"></i></div>
+              <div>
+                <h4>Melhor Tarifa Sem Intermediários</h4>
+                <p>Economia real reservando direto com os anfitriões.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i data-lucide="clock" class="w-5 h-5 text-gold"></i></div>
+              <div>
+                <h4>Atendimento Rápido via WhatsApp</h4>
+                <p>Tire suas dúvidas e personalize detalhes da sua estadia em minutos.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="trust-box mt-10">
+            <div class="flex items-center gap-3">
+              <div class="online-indicator"></div>
+              <span class="text-sm font-medium text-sand">Atendimento Online &bull; Chalés Clara WhatsApp</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Dynamic Booking & Quotation Card -->
+        <div class="booking-card" id="calculator-card">
+          <div class="card-header flex items-center justify-between pb-6 border-b border-border">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-muted">Diária a partir de</span>
+              <div class="price-display flex items-baseline gap-1">
+                <span class="currency">R$</span>
+                <span class="amount" id="price-per-night">550</span>
+                <span class="period">/ noite</span>
+              </div>
+            </div>
+            <div class="badge-discount">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 inline"></i> Café Incluso
+            </div>
+          </div>
+
+          <form id="booking-form" class="mt-6 space-y-4" onsubmit="handleBookingSubmit(event)">
+            <!-- Dates Selection -->
+            <div class="grid-2 gap-4">
+              <div class="form-group">
+                <label for="checkin-date" class="form-label">
+                  <i data-lucide="calendar" class="w-3.5 h-3.5 text-gold"></i> Check-in
+                </label>
+                <input type="date" id="checkin-date" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="checkout-date" class="form-label">
+                  <i data-lucide="calendar" class="w-3.5 h-3.5 text-gold"></i> Check-out
+                </label>
+                <input type="date" id="checkout-date" class="form-input" required>
+              </div>
+            </div>
+
+            <!-- Guests -->
+            <div class="form-group">
+              <label for="guest-count" class="form-label">
+                <i data-lucide="users" class="w-3.5 h-3.5 text-gold"></i> Hóspedes
+              </label>
+              <select id="guest-count" class="form-input">
+                <option value="2 Adultos (Casal)">2 Adultos (Ideal para Casais)</option>
+                <option value="2 Adultos + 1 Criança (Sofá-cama)">2 Adultos + 1 Criança (com Sofá-Cama)</option>
+                <option value="1 Adulto (Individual)">1 Adulto (Refúgio Individual)</option>
+              </select>
+            </div>
+
+            <!-- Optional Add-ons -->
+            <div class="addons-section pt-2">
+              <label class="form-label mb-2 block">Deseja adicionar mimo especial?</label>
+
+              <label class="addon-checkbox">
+                <input type="checkbox" id="addon-romance">
+                <div class="addon-info">
+                  <span class="addon-title">Kit Romântico Boas-Vindas</span>
+                  <span class="addon-desc">Espumante gelado, taças, chocolates finos e pétalas (+ R$ 180 taxa única)</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Dynamic Price Breakdown -->
+            <div class="price-breakdown pt-4 border-t border-border" id="price-breakdown">
+              <div class="breakdown-row">
+                <span id="nights-label">2 noites x R$ 550</span>
+                <span id="nights-subtotal">R$ 1.100</span>
+              </div>
+              <div class="breakdown-row text-success">
+                <span>Café da Manhã</span>
+                <span>Incluso (R$ 0)</span>
+              </div>
+              <div class="breakdown-row text-success">
+                <span>Cama, Banho &amp; Hidro</span>
+                <span>Incluso</span>
+              </div>
+              <div class="breakdown-row" id="addons-row" style="display: none;">
+                <span>Extras Românticos</span>
+                <span id="addons-subtotal">R$ 0</span>
+              </div>
+              <div class="breakdown-row total-row">
+                <span>Estimativa Total</span>
+                <strong id="final-total" class="text-gold text-xl">R$ 1.100</strong>
+              </div>
+            </div>
+
+            <!-- Guest Name (for personalized WhatsApp) -->
+            <div class="form-group pt-2">
+              <label for="guest-name" class="form-label">Seu Nome</label>
+              <input type="text" id="guest-name" class="form-input" placeholder="Como podemos te chamar?" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-whatsapp w-full py-4 text-base font-semibold shadow-lg">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>Consultar e Reservar no WhatsApp</span>
+            </button>
+            <p class="text-center text-[11px] text-muted">
+              Você será direcionado diretamente para o WhatsApp oficial para confirmar datas e receber as instruções.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & EXPERIENCE GUIDE -->
+  <section id="localizacao" class="section-padding bg-charcoal">
+    <div class="container">
+      <div class="grid-2 items-center gap-16">
+        <div>
+          <span class="section-eyebrow">COMO CHEGAR &bull; MARIA DA FÉ MG</span>
+          <h2 class="section-heading mb-6">Apenas 2,5 km do centro da cidade</h2>
+          <p class="text-muted leading-relaxed mb-6">
+            Maria da Fé é a cidade mais fria de Minas Gerais e o maior polo de olivicultura do Brasil, com restaurantes premiados e paisagens cinematográficas da Serra da Mantiqueira.
+          </p>
+          <div class="location-points space-y-4 mb-8">
+            <div class="location-item">
+              <div class="loc-icon"><i data-lucide="map-pin" class="w-4 h-4 text-gold"></i></div>
+              <div>
+                <strong>Localização Privilegiada:</strong> Apenas 2,5 km do centro de Maria da Fé em um dos bairros mais preservados e tranquilos.
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="loc-icon"><i data-lucide="car" class="w-4 h-4 text-gold"></i></div>
+              <div>
+                <strong>Acesso Fácil:</strong> Estrada de terra em ótimas condições. Qualquer modelo de carro de passeio acessa com total facilidade.
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="loc-icon"><i data-lucide="shield" class="w-4 h-4 text-gold"></i></div>
+              <div>
+                <strong>Privacidade &amp; Segurança:</strong> Entrada com portão eletrônico e porteiro privativo para sua tranquilidade.
+              </div>
+            </div>
+          </div>
+          <a href="#reserva" class="btn btn-outline">
+            <span>Consultar Disponibilidade</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="map-visual-card">
+          <div class="map-card-inner">
+            <div class="map-header">
+              <i data-lucide="navigation" class="w-5 h-5 text-gold"></i>
+              <div>
+                <h4>Chalés Clara • Terra das Oliveiras</h4>
+                <p>Maria da Fé - MG, Serra da Mantiqueira</p>
+              </div>
+            </div>
+            <div class="map-coordinates">
+              <span>Distância: 2,5 km do Centro Histórico</span>
+              <span>Estrada de terra bem conservada &bull; Acesso universal</span>
+            </div>
+            <div class="map-features mt-6 grid-2 gap-3">
+              <div class="mini-feat">
+                <i data-lucide="droplet" class="w-4 h-4 text-gold"></i>
+                <span>Rota dos Azeites Artesanais</span>
+              </div>
+              <div class="mini-feat">
+                <i data-lucide="coffee" class="w-4 h-4 text-gold"></i>
+                <span>Cafeterias &amp; Queijarias</span>
+              </div>
+              <div class="mini-feat">
+                <i data-lucide="mountain" class="w-4 h-4 text-gold"></i>
+                <span>Pico da Bandeira &amp; Mirantes</span>
+              </div>
+              <div class="mini-feat">
+                <i data-lucide="moon" class="w-4 h-4 text-gold"></i>
+                <span>Noites Frias &amp; Céu Limpo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (PERGUNTAS FREQUENTES) -->
+  <section id="faq" class="section-padding bg-charcoal-light">
+    <div class="container max-w-3xl">
+      <div class="section-header text-center mb-16">
+        <span class="section-eyebrow">TRANSPARÊNCIA TOTAL</span>
+        <h2 class="section-heading">Perguntas Frequentes</h2>
+        <p class="section-subheading">Tudo o que você precisa saber sobre sua estadia no Terra das Oliveiras.</p>
+      </div>
+
+      <div class="faq-accordion space-y-4">
+        
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>O café da manhã está incluso na diária?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>Sim! O café da manhã já está incluso para que você acorde com muito aconchego e sabor no clima da serra.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Como é o acesso até o chalé? Carro comum chega fácil?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>Sim! O chalé fica a apenas 2,5 km do centro de Maria da Fé. A estrada de terra é em ótimas condições e qualquer veículo de passeio acessa com total facilidade e segurança.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>O chalé acomoda crianças?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>Sim! Além da confortável cama para casal, disponibilizamos 01 sofá-cama que acomoda 1 criança confortavelmente.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Vocês fornecem roupas de cama e toalhas?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>Sim! Fornecemos o conjunto completo de cama e banho, com lençóis, edredons, travesseiros e toalhas higienizadas de alta qualidade.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>A cozinha é equipada para cozinhar?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>Sim! A cozinha conta com cooktop, frigobar, cafeteira, pratos, copos, taças, talheres e utensílios completos para você preparar suas receitas favoritas.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Como funciona a banheira de hidromassagem e o ar condicionado?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>A banheira de hidromassagem é privativa e possui água aquecida. O chalé também conta com ar condicionado para manter o ambiente sempre agradável, independente da temperatura externa.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CALL TO ACTION (CTA) -->
+  <section class="final-cta-section relative text-center">
+    <div class="final-cta-bg"></div>
+    <div class="container relative z-10 max-w-2xl py-24">
+      <span class="tag-pill mb-4">SEU REFÚGIO NA MANTIQUEIRA</span>
+      <h2 class="text-3xl md:text-5xl font-light text-white uppercase tracking-tight mb-6">
+        Viva dias de conforto, lazer e privacidade no Terra das Oliveiras
+      </h2>
+      <p class="text-sand/80 text-base md:text-lg mb-10 font-light leading-relaxed">
+        Poucas datas disponíveis para os próximos finais de semana e feriados em Maria da Fé MG. Reserve com antecedência direto com os proprietários.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#reserva" class="btn btn-gold btn-lg w-full sm:w-auto">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+          <span>Consultar Datas &amp; Reservar</span>
+        </a>
+        <a href="https://wa.me/5535997386945?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Chal%C3%A9s%20Clara%20-%20Terra%20das%20Oliveiras%20em%20Maria%20da%20F%C3%A9%20MG" target="_blank" rel="noopener" class="btn btn-whatsapp-outline btn-lg w-full sm:w-auto">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer py-14 bg-black border-t border-border text-xs text-muted">
+    <div class="container flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="text-white font-serif text-base tracking-widest block mb-1">CHALÉS CLARA • TERRA DAS OLIVEIRAS</span>
+        <p>Maria da Fé, Minas Gerais &bull; Serra da Mantiqueira</p>
+      </div>
+      <div class="flex gap-8 text-xs flex-wrap items-center">
+        <a href="#o-espaco" class="hover:text-gold transition-colors">O Espaço</a>
+        <a href="#galeria" class="hover:text-gold transition-colors">Fotos</a>
+        <a href="#avaliacoes" class="hover:text-gold transition-colors">Avaliações</a>
+        <a href="#reserva" class="hover:text-gold transition-colors">Reserva Direta</a>
+        <a href="links.html" class="hover:text-gold transition-colors text-gold">Linktree Oficial</a>
+        <a href="https://www.instagram.com/chalesclara/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Instagram</a>
+      </div>
+      <div>
+        <p>&copy; 2026 Chalés Clara. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY BOTTOM BAR (CONVERSION BOOSTER) -->
+  <div class="sticky-bar" id="sticky-bar">
+    <div class="container flex items-center justify-between">
+      <div class="sticky-price">
+        <span class="text-[11px] text-muted block">Chalés Clara &bull; Terra das Oliveiras</span>
+        <div class="flex items-baseline gap-1">
+          <strong class="text-gold font-semibold text-lg">R$ 550</strong>
+          <span class="text-xs text-muted">/ noite &bull; Café Incluso</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#reserva" class="btn btn-gold btn-sm">
+          <i data-lucide="check-circle" class="w-4 h-4"></i>
+          <span>Reservar Direto</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/5535997386945?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20disponibilidade%20para%20o%20Chal%C3%A9s%20Clara%20-%20Terra%20das%20Oliveiras" target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Falar no WhatsApp">
+    <div class="wa-badge-pulse"></div>
+    <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="./main.js"></script>
+</body>
+</html>
